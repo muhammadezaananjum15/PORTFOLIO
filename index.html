@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Ezaan Anjum</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./Pages/style.css" />
+</head>
+<body>
+  <div id="page-loader">
+    <canvas id="loader-canvas"></canvas>
+    <div class="loader-orb loader-orb--1"></div>
+    <div class="loader-orb loader-orb--2"></div>
+    <div class="loader-orb loader-orb--3"></div>
+    <div class="loader-content">
+      <div class="loader-identity">
+        <div class="loader-name">
+          <span class="lname-char" style="--i:0">M</span>
+          <span class="lname-char" style="--i:8">d</span>
+          <span class="lname-char lname-sep" style="--i:7">.</span>
+          <span class="lname-char" style="--i:8">E</span>
+          <span class="lname-char" style="--i:9">z</span>
+          <span class="lname-char" style="--i:10">a</span>
+          <span class="lname-char" style="--i:11">a</span>
+          <span class="lname-char" style="--i:12">n</span>
+          <span class="lname-char lname-sep" style="--i:13">.</span>
+          <span class="lname-char" style="--i:4">A</span>
+          <span class="lname-char" style="--i:5">n</span>
+          <span class="lname-char" style="--i:6">j</span>
+          <span class="lname-char" style="--i:7">u</span>
+          <span class="lname-char" style="--i:8">m</span>
+        </div>
+        <p class="loader-tagline">Frontend Developer</p>
+      </div>
+      <div class="loader-progress-wrap">
+        <div class="loader-progress-track">
+          <div class="loader-progress-fill" id="loader-progress-fill"></div>
+          <div class="loader-progress-glow"></div>
+        </div>
+        <div class="loader-progress-labels">
+          <span class="loader-status-text" id="loader-status">Initialising</span>
+          <span class="loader-pct" id="loader-pct">0%</span>
+        </div>
+      </div>
+    </div>
+    <!-- Horizontal scan line -->
+    <div class="loader-scanline"></div>
+  </div>
+  <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero" id="nav-logo">
+        <span class="logo-text">Md Ezaan Anjum<span class="logo-accent">.</span></span>
+      </a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="hamburger-btn">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#about" data-section="about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills" data-section="skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects" data-section="projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience" data-section="experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials" data-section="testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" data-section="contact">Contact</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-nav-cta" href="#contact">Hire Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section id="hero" class="hero-section">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-noise"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <h1 class="hero-heading animate-hero-2">
+          <span class="heading-line">Every Great</span>
+          <span class="heading-line heading-line--accent">
+            <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+          </span>
+          <span class="heading-line">Dam to it</span>
+        </h1>
+
+        <!-- Subheading -->
+        <p class="hero-subheading animate-hero-3">
+          I'm <strong>Muhammad Ezaan Anjum</strong> a Frontend Developer who blends clean code
+          with pixel-perfect design to build interfaces people love to use.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group animate-hero-4">
+          <a href="#projects" class="btn btn-primary-cta">
+            <span>View My Work</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary-cta">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+
+        <!-- Social Row -->
+        <div class="hero-social-row animate-hero-5">
+          <a href="https://github.com/muhammadezaananjum15" target="_blank" class="hero-social-link"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-ezaan-anjum" target="_blank" class="hero-social-link"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="hero-social-link" aria-label="Twitter/X">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a href="https://dribbble.com" target="_blank" class="hero-social-link" aria-label="Dribbble">
+            <i class="fa-brands fa-dribbble"></i>
+          </a>
+          <span class="hero-social-divider"></span>
+          <span class="hero-social-label">Follow me</span>
+        </div>
+      </div>
+
+
+  </section>
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-header text-center reveal-element">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="title-accent">Me</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="row about-row align-items-center g-5">
+        <!-- Image Column -->
+        <div class="col-lg-5 reveal-element">
+          <div class="about-image-wrapper">
+            <div class="about-image-frame">
+              <div class="about-image-placeholder">
+                <img src="./assets/Portfolio.png" alt="">
+              </div>
+              <div class="about-image-border"></div>
+            </div>
+       
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="col-lg-7 reveal-element">
+          <div class="about-content">
+            <h3 class="about-name">Heyyy , I'm Muhammad Ezaan Anjum <i class="fa-solid fa-hand-wave"></i></h3>
+            <p class="about-bio">
+              I’m a Frontend Developer with <strong>2+ years</strong> of experience building fast, accessible, and
+              visually engaging web applications.
+              I enjoy turning complex designs into clean, maintainable code using modern JavaScript tools and
+              frameworks. </p>
+            <p class="about-bio">
+              My journey started with simple HTML and CSS curiosity, and over time it grew into a real passion for
+              creating smooth,
+              user-friendly digital experiences. For me, good code isn’t just about how it works it’s about how it
+              feels. Every
+              detail, every interaction matters. </p>
+            <p class="about-bio">
+              Outside of coding, I like exploring new design trends, experimenting with ideas, and sharing what I learn
+              with other
+              developers in my community.
+            </p>
+
+            <!-- Personal Info Grid -->
+            <div class="about-info-grid">
+              <div class="info-item">
+                <i class="fa-solid fa-map-pin"></i>
+                <span>Karachi, Pakistan</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>muhammadezaananjum.15@gmail.com</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>Marticulation</span>
+              </div>
+              <div class="info-item">
+                <i class="fa-solid fa-language"></i>
+                <span>English, Urdu</span>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="about-actions">
+              <a href="#contact" class="btn btn-primary-cta">
+                <span>Hire Me</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="resume.pdf" download class="btn btn-secondary-cta">
+                <i class="fa-solid fa-download"></i>
+                <span>Download CV</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="about-stats-row reveal-element">
+        <div class="stat-card">
+          <i class="fa-solid fa-code"></i>
+          <span class="stat-number" data-count="20">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-users"></i>
+          <span class="stat-number" data-count="15">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Happy Clients</p>
+        </div>
+        <div class="stat-card">
+          <i class="fa-solid fa-star"></i>
+          <span class="stat-number" data-count="5">0</span>
+          <span class="stat-suffix">k</span>
+          <p class="stat-label">GitHub Stars</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS SECTION
+  ============================================================ -->
+  <section id="skills" class="section-padding skills-section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header text-center reveal-element">
+        <span class="section-tag">What I Do</span>
+        <h2 class="section-title">My <span class="title-accent">Skills</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A curated stack of tools and technologies I use to build exceptional web
+          experiences.</p>
+      </div>
+
+      <!-- Skill Category Tabs -->
+      <div class="skills-tabs reveal-element">
+        <button class="skill-tab active" data-category="frontend">
+          <i class="fa-solid fa-desktop"></i> <span>Frontend</span>
+        </button>
+        <button class="skill-tab" data-category="backend">
+          <i class="fa-solid fa-server"></i> <span>Backend</span>
+        </button>
+        <button class="skill-tab" data-category="tools">
+          <i class="fa-solid fa-wrench"></i> <span>Tools</span>
+        </button>
+        <button class="skill-tab" data-category="design">
+          <i class="fa-solid fa-palette"></i> <span>Design</span>
+        </button>
+      </div>
+
+      <!-- Frontend Skills -->
+      <div class="skills-category active" id="cat-frontend">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <h4 class="skill-name">HTML5</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="95">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">95%</span>
+              </div>
+              <p class="skill-desc">Semantic markup, accessibility, SEO fundamentals.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <h4 class="skill-name">CSS3 / SASS</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="92">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">92%</span>
+              </div>
+              <p class="skill-desc">Animations, Grid, Flexbox, custom properties, BEM.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-js"></i>
+              </div>
+              <h4 class="skill-name">JavaScript</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="90">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <p class="skill-desc">ES2024+, async/await, DOM manipulation, APIs.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <h4 class="skill-name">React </h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="88">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <p class="skill-desc">In Learning</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-bootstrap"></i>
+              </div>
+              <h4 class="skill-name">Bootstrap</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="93">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">93%</span>
+              </div>
+              <p class="skill-desc">Bootstrap 5, custom themes, utility classes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend Skills -->
+      <div class="skills-category" id="cat-backend">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-php"></i>
+              </div>
+              <h4 class="skill-name">Php</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="90">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">80%</span>
+              </div>
+              <p class="skill-desc">Express, REST APIs, middleware, authentication.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h4 class="skill-name">MySQL</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="75">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">75%</span>
+              </div>
+              <p class="skill-desc">Firestore, Auth, Hosting, Cloud Functions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools Skills -->
+      <div class="skills-category" id="cat-tools">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-git-alt"></i>
+              </div>
+              <h4 class="skill-name">Git & GitHub</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="90">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <p class="skill-desc">Version control, CI/CD pipelines, code review.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-microsoft"></i>
+              </div>
+              <h4 class="skill-name">Vs Code</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="68">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">68%</span>
+              </div>
+              <p class="skill-desc">Containerization, Compose, deployment workflows.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-vial"></i>
+              </div>
+              <h4 class="skill-name">Testing</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="75">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">75%</span>
+              </div>
+              <p class="skill-desc">Jest, Vitest, Cypress, Testing Library.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design Skills -->
+      <div class="skills-category" id="cat-design">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+              <h4 class="skill-name">Figma</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="88">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <p class="skill-desc">Component design, prototyping, design systems.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-magic-wand-sparkles"></i>
+              </div>
+              <h4 class="skill-name">UI/UX Design</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="85">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <p class="skill-desc">User research, wireframing, usability testing.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal-element">
+            <div class="skill-badge-card">
+              <div class="skill-icon-wrap">
+                <i class="fa-solid fa-brush"></i>
+              </div>
+              <h4 class="skill-name">Motion Design</h4>
+              <div class="skill-bar-wrap">
+                <div class="skill-bar" data-width="78">
+                  <div class="skill-bar-fill"></div>
+                </div>
+                <span class="skill-percent">78%</span>
+              </div>
+              <p class="skill-desc">CSS animations, GSAP, Lottie, micro-interactions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header text-center reveal-element">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="title-accent">Projects</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A selection of projects that showcase my skills, creativity, and
+          problem-solving approach.</p>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="row g-4 projects-grid">
+
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="project-card" data-project="1">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">
+              <img src="./assets/The-Content-Hub.png" alt="Blogging Website">
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" target="_blank" class="overlay-btn" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/muhammadezaananjum15" target="_blank" class="overlay-btn"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-category-tag">Blogging Website</div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">The Content Hub</h3>
+              <p class="project-desc">A modern blogging platform with a clean design and seamless user experience and
+                all blogs i written my self with verified information.</p>
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i>
+                  HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>
+                  CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i>
+                  JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i>
+                  Bootstrap</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i>
+                  Git & Github</span>
+
+
+              </div>
+              <div class="project-card-actions">
+                <a href="https://muhammadezaananjum15.github.io/Blogging-Website/" target="_blank"
+                  class="project-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/muhammadezaananjum15" target="_blank"
+                  class="project-link-btn project-link-btn--ghost">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="project-card" data-project="2">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">
+             <img src="./assets/Karachi-Mart.png" alt="">
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" target="_blank" class="overlay-btn" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/muhammadezaananjum15" target="_blank" class="overlay-btn"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-category-tag">E-commerce</div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Karachi Cart</h3>
+              <p class="project-desc">The Site is under maintenance</p>
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i>
+                  HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>
+                  CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i>
+                  JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i>
+                  Bootstrap</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i>
+                  Git & Github</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="#" target="_blank" class="project-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/muhammadezaananjum15" target="_blank"
+                  class="project-link-btn project-link-btn--ghost">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="project-card" data-project="3">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">
+<img src="./assets/Gemini_Generated_Image_xkkuzbxkkuzbxkku.png" alt="">
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="https://muhammadezaananjum15.github.io/Mecardo-Amusement-Park/" target="_blank" class="overlay-btn" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/muhammadezaananjum15" target="_blank" class="overlay-btn"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-category-tag">Amusement Park</div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Mercado Amusement Park</h3>
+              <p class="project-desc">There are group of javascript projects that i used different technologies in.</p>
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i>
+                  HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>
+                  CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i>
+                  JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i>
+                  Bootstrap</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i>
+                  Git & Github</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://muhammadezaananjum15.github.io/Mecardo-Amusement-Park/" target="_blank"
+                  class="project-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/muhammadezaananjum15" target="_blank"
+                  class="project-link-btn project-link-btn--ghost">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="project-card" data-project="4">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">
+
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="https://muhammadezaananjum15.github.io/JavaScript-Projects/" target="_blank" class="overlay-btn" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/muhammadezaananjum15" target="_blank" class="overlay-btn"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-category-tag">Small Projects of Js</div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Projects of Js</h3>
+              <p class="project-desc">There are the group of small js project in which i used properties loos arrays and functions for practise in small applications as early stage for practical purpose.</p>
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i>
+                  HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>
+                  CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i>
+                  JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i>
+                  Bootstrap</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i>
+                  Git & Github</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="https://muhammadezaananjum15.github.io/JavaScript-Projects/" target="_blank" class="project-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/muhammadezaananjum15" target="_blank"
+                  class="project-link-btn project-link-btn--ghost">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="project-card" data-project="5">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">
+
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" target="_blank" class="overlay-btn" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/muhammadezaananjum15" target="_blank" class="overlay-btn"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-category-tag">Hospital Management Website</div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Life Care</h3>
+              <p class="project-desc">The Site is under maintenance</p>
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i>
+                  HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>
+                  CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i>
+                  JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i>
+                  Bootstrap</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i>
+                  Git & Github</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="#" target="_blank" class="project-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/muhammadezaananjum15" target="_blank"
+                  class="project-link-btn project-link-btn--ghost">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="project-card" data-project="6">
+            <div class="project-thumb">
+              <div class="project-thumb-placeholder">
+
+              </div>
+              <div class="project-overlay">
+                <div class="project-overlay-links">
+                  <a href="#" target="_blank" class="overlay-btn" aria-label="Live Demo">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="https://github.com/muhammadezaananjum15" target="_blank" class="overlay-btn"
+                    aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="project-category-tag">Mobile Hub</div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Mobile Cart</h3>
+              <p class="project-desc">The Site is under maintenance</p>
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-html5"></i>
+                  HTML5</span>
+                <span class="tech-tag"><i class="fa-brands fa-css3-alt"></i>
+                  CSS3</span>
+                <span class="tech-tag"><i class="fa-brands fa-js"></i>
+                  JavaScript</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i>
+                  Bootstrap</span>
+                <span class="tech-tag"><i class="fa-brands fa-git-alt"></i>
+                  Git & Github</span>
+              </div>
+              <div class="project-card-actions">
+                <a href="#" target="_blank" class="project-link-btn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                </a>
+                <a href="https://github.com/muhammadezaananjum15" target="_blank"
+                  class="project-link-btn project-link-btn--ghost">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5 reveal-element">
+        <a href="https://github.com/muhammadezaananjum15" target="_blank" class="btn btn-outline-view-all">
+          <i class="fa-brands fa-github"></i>
+          <span>View All on GitHub</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="section-padding experience-section">
+    <div class="container">
+      <div class="section-header text-center reveal-element">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Work <span class="title-accent">Experience</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">A timeline of my professional career and the impact I've made along the way.
+        </p>
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline-line">
+          <div class="timeline-line-fill"></div>
+        </div>
+
+        <!-- Entry 1 -->
+        <div class="timeline-entry reveal-element" data-side="right">
+          <div class="timeline-dot">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="timeline-card timeline-card--right">
+            <div class="timeline-head">
+              <div class="timeline-company-logo">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Frontend Developer</h3>
+                <p class="timeline-company">Freelance - remote</p>
+              </div>
+            </div>
+            <div class="timeline-duration">
+              <i class="fa-regular fa-calendar"></i>
+              <span>Aug 2025 — Present</span>
+              <span class="timeline-badge">Current</span>
+            </div>
+            <p class="timeline-desc">Currently working as a remote freelance developer, providing web development
+              services to clients. Focused on building
+              responsive websites, improving user interfaces, and applying practical frontend skills in real-world
+              projects. Gaining
+              hands-on experience in client communication, project delivery, and problem-solving while continuously
+              improving
+              technical expertise.
+            </p>
+            <div class="timeline-tech">
+              <span><i class="fa-brands fa-html5"></i>
+                HTML5</span>
+              <span><i class="fa-brands fa-css3-alt"></i>
+                CSS3</span>
+              <span><i class="fa-brands fa-bootstrap"></i>
+                Bootstrap</span>
+              <span><i class="fa-brands fa-js"></i>
+                JavaScript</span>
+              <span><i class="fa-brands fa-git-alt"></i>
+                Git</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 2 -->
+        <!-- <div class="timeline-entry reveal-element" data-side="left">
+          <div class="timeline-dot">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="timeline-card timeline-card--left">
+            <div class="timeline-head">
+              <div class="timeline-company-logo">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Frontend Developer</h3>
+                <p class="timeline-company"></p>
+              </div>
+            </div>
+            <div class="timeline-duration">
+              <i class="fa-regular fa-calendar"></i>
+              <span></span>
+            </div>
+            <p class="timeline-desc"></p>
+            <div class="timeline-tech">
+              <span><i class="fa-brands fa-vuejs"></i></span>
+              <span><i class="fa-brands fa-css3-alt"></i></span>
+              <span><i class="fa-brands fa-js"></i></span>
+              <span><i class="fa-brands fa-bootstrap"></i></span>
+            </div>
+          </div>
+        </div> -->
+        <div class="timeline-entry reveal-element" data-side="left">
+          <div class="timeline-dot timeline-dot--edu">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-card timeline-card--left timeline-card--edu">
+            <div class="timeline-head">
+              <div class="timeline-company-logo">
+                <i class="fa-solid fa-code"></i>
+
+              </div>
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Full-Stack Developer</h3>
+                <p class="timeline-company">Aptech NN</p>
+              </div>
+            </div>
+            <div class="timeline-duration">
+              <i class="fa-regular fa-calendar"></i>
+              <span>Aug 2025 — Jun 2028</span>
+              <span class="timeline-badge timeline-badge--edu">Education</span>
+            </div>
+            <p class="timeline-desc">Currently pursuing a Diploma in Aptech Certified Computer Professional (ACCP)
+              from Aptech (Aug 2025 – June 2028).
+              The program focuses on software development and IT skills, including HTML, CSS, JavaScript, programming
+              (C/C++/Java),
+              OOP, and databases. Gaining hands-on experience through projects, with a strong focus on web development,
+              problem-solving, and building real-world applications.
+            </p>
+            <div class="timeline-tech">
+              <span><i class="fa-brands fa-html5"></i>
+                HTML5</span>
+              <span><i class="fa-brands fa-css3-alt"></i>
+                CSS3</span>
+              <span><i class="fa-brands fa-bootstrap"></i>
+                Bootstrap</span>
+              <span><i class="fa-brands fa-js"></i>
+                JavaScript</span>
+              <span><i class="fa-brands fa-git-alt"></i>
+                Git</span>
+              <span><i class="fa-brands fa-figma"></i>
+                Figma</span>
+              <span><i class="fa-solid fa-magic-wand-sparkles"></i>
+                UI/UX
+              </span>
+              <span>Many more see from skills section</span>
+            </div>
+          </div>
+        </div>
+        <!-- Entry 3 -->
+        <div class="timeline-entry reveal-element" data-side="right">
+          <div class="timeline-dot timeline-dot--edu">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+
+          <div class="timeline-card timeline-card--right">
+            <div class="timeline-head">
+              <div class="timeline-company-logo">
+                <i class="fa-solid fa-university"></i>
+              </div>
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Maticulation General Science</h3>
+                <p class="timeline-company">Islamia English Model</p>
+              </div>
+            </div>
+            <div class="timeline-duration">
+              <i class="fa-regular fa-calendar"></i>
+              <span>April 2024 — May 2026</span>
+              <span class="timeline-badge timeline-badge--edu">Education</span>
+            </div>
+            <p class="timeline-desc">
+              Studied at Islamia English Model School with a focus on General Science, building a strong academic
+              foundation across
+              core subjects. Achieved an A grade in 9th standard, demonstrating consistent performance and discipline.
+              Actively
+              participated in class activities and group projects, which helped develop problem-solving, teamwork, and
+              communication
+              skills. During this time, I also developed an early interest in computers and technology, which later
+              influenced my path
+              toward web development and user-focused design.
+
+            </p>
+            <div class="timeline-tech">
+              <span><i class="fa-solid fa-award"></i> Honors</span>
+              <span><i class="fa-solid fa-trophy"></i>Position Holder List</span>
+              <span><i class="fa-solid fa-users"></i>Punctuality</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entry 4 — Education -->
+        <!-- <div class="timeline-entry reveal-element" data-side="left">
+            <div class="timeline-dot">
+                        <i class="fa-solid fa-code"></i>
+                      </div>
+          <div class="timeline-card timeline-card--left timeline-card--edu">
+            <div class="timeline-head">
+              <div class="timeline-company-logo">
+                <i class="fa-solid fa-university"></i>
+              </div>
+              <div class="timeline-meta">
+                <h3 class="timeline-role">Marticulation General Science</h3>
+                <p class="timeline-company">Islamia English Model</p>
+              </div>
+            </div>
+            <div class="timeline-duration">
+              <i class="fa-regular fa-calendar"></i>
+              <span>Sep 2016 — May 2020</span>
+              <span class="timeline-badge timeline-badge--edu">Education</span>
+            </div>
+            <p class="timeline-desc">Graduated with Honors (GPA 3.8). Focused on Human-Computer Interaction and
+              Web Technologies. Founded the university's first Frontend Club with 200+ members. Senior thesis:
+              "Adaptive UI Rendering for Low-Literacy Users."</p>
+            <div class="timeline-tech">
+              <span><i class="fa-solid fa-award"></i> Honors</span>
+              <span><i class="fa-solid fa-trophy"></i> Dean's List</span>
+              <span><i class="fa-solid fa-users"></i> Club Founder</span>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section id="testimonials" class="section-padding testimonials-section">
+    <div class="container">
+      <div class="section-header text-center reveal-element">
+        <span class="section-tag">Kind Words</span>
+        <h2 class="section-title">What Clients <span class="title-accent">Say</span></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">Muhammad Ezaan Anjum is one of the most talented developers I've ever worked
+              with.
+              He transformed our outdated platform into a lightning-fast, gorgeous experience. Our bounce rate
+              dropped by 42% in the first month after launch.</p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5 class="author-name">Sarah Johnson</h5>
+                <p class="author-role">CTO, TechNova Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="testimonial-card testimonial-card--featured">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">Working with Muhammad Ezaan Anjum was an absolute pleasure. He has an incredible
+              eye
+              for detail and delivered our project 2 weeks ahead of schedule. The animations and interactions
+              he built are absolutely stunning our clients are blown away.</p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5 class="author-name">Marcus Rivera</h5>
+                <p class="author-role">Founder, PixelCraft Agency</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">Muhammad Ezaan Anjum rebuilt our e-commerce front-end from scratch. The results
+              were
+              beyond our expectations 60% faster load times and a 28% lift in sales within the first quarter.
+              His code quality and documentation are exemplary.</p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5 class="author-name">Emily Chen</h5>
+                <p class="author-role">Head of Product, NexaRetail</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">Exceptional attention to detail, flawless communication, and he always
+              goes above and beyond. Muhammad Ezaan Anjum developed our entire design system and it's now used across 3
+              products.
+              I wouldn't hire anyone else for frontend work.</p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5 class="author-name">David Park</h5>
+                <p class="author-role">VP Engineering, DataForge AI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">Muhammad Ezaan Anjum is rare he thinks like a designer, codes like an
+              engineer, and
+              communicates like a PM. He transformed our MVP into a polished product that we were proud to
+              launch. An absolute 10/10 experience working with him.</p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5 class="author-name">Lisa Thompson</h5>
+                <p class="author-role">CEO, GreenTech Startup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-element">
+          <div class="testimonial-card">
+            <div class="testimonial-quote-icon">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">We hired Muhammad Ezaan Anjum for a 3-month contract and ended up extending it
+              to a
+              full year. His contributions reshaped how our entire engineering team thinks about user interface.
+              Best hire we've ever made, period.</p>
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h5 class="author-name">James Walker</h5>
+                <p class="author-role">Engineering Lead, Scale.io</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="section-padding contact-section">
+    <div class="container">
+      <div class="section-header text-center reveal-element">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">Get In <span class="title-accent">Touch</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-subtitle">
+          Have a project in mind? I'd love to hear about it. Drop me a message and I'll get back to you within
+          24 hours.
+        </p>
+      </div>
+
+      <div class="row g-5 contact-row">
+        <div class="col-lg-4 reveal-element">
+          <div class="contact-info-block">
+            <h4 class="contact-info-title">Contact Information</h4>
+            <p class="contact-info-sub">Ready to start something great together? Reach out through any of these
+              channels.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="contact-icon-wrap">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="detail-label">Email</p>
+                  <a href="mailto:muhammadezaananjum.15@gmail.com" class="detail-value">muhammadezaananjum.15</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-icon-wrap">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <p class="detail-label">Phone</p>
+                  <a href="tel:+923163784559" class="detail-value">+92 316 3784559</a>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-icon-wrap">
+                  <i class="fa-solid fa-map-pin"></i>
+                </div>
+                <div>
+                  <p class="detail-label">Location</p>
+                  <span class="detail-value">Karachi, Pakistan</span>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-icon-wrap">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <p class="detail-label">Availability</p>
+                  <span class="detail-value">Mon–Sat, 11AM–11PM PST</span>
+                </div>
+              </div>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/muhammadezaananjum15" target="_blank" class="contact-social-icon"
+                aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/muhammad-ezaan-anjum" target="_blank" class="contact-social-icon"
+                aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="contact-social-icon" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/dev.ezaan?igsh=c2kwbGY3NGt6MTh5" target="_blank" class="contact-social-icon" aria-label="Dribbble">
+              <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8 reveal-element">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div id="form-message" class="form-message" role="alert" aria-live="polite"></div>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label for="form-name" class="form-label-custom">
+                    <i class="fa-solid fa-user"></i> Full Name
+                  </label>
+                  <input type="text" id="form-name" name="from_name" class="form-control-custom" placeholder="Aqqib Tariq"
+                    required />
+                  <span class="form-error-msg" id="name-error"></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group-custom">
+                  <label for="form-email" class="form-label-custom">
+                    <i class="fa-solid fa-envelope"></i> Email Address
+                  </label>
+                  <input type="email" id="form-email" name="reply_to" class="form-control-custom"
+                    placeholder="john@example.com" required />
+                  <span class="form-error-msg" id="email-error"></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label for="form-subject" class="form-label-custom">
+                    <i class="fa-solid fa-tag"></i> Subject
+                  </label>
+                  <input type="text" id="form-subject" name="subject" class="form-control-custom"
+                    placeholder="Project Inquiry / Collaboration" required />
+                  <span class="form-error-msg" id="subject-error"></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group-custom">
+                  <label for="form-message" class="form-label-custom">
+                    <i class="fa-solid fa-message"></i> Message
+                  </label>
+                  <textarea id="form-msg-area" name="message" class="form-control-custom form-textarea"
+                    placeholder="Tell me about your project, timeline, and budget..." required rows="6"></textarea>
+                  <span class="form-error-msg" id="msg-area-error"></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-form-submit" id="submit-btn">
+                  <span class="submit-text">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Send Message
+                  </span>
+                  <span class="submit-loading" style="display:none;">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    Sending...
+                  </span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="main-footer">
+    <div class="footer-top-border"></div>
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand-col">
+          <a href="#hero" class="footer-logo">Md Ezaan Anjum<span class="logo-accent">.</span></a>
+          <p class="footer-tagline">
+            Frontend Developer crafting beautiful, high-performance web experiences. Available for freelance
+            and full-time opportunities worldwide.
+          </p>
+          <div class="footer-socials">
+            <a href="https://github.com/muhammadezaananjum15" target="_blank" class="footer-social" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-ezaan-anjum" target="_blank" class="footer-social"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="footer-social" aria-label="Twitter / X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+      </a>
+      <a href="https://www.instagram.com/dev.ezaan?igsh=c2kwbGY3NGt6MTh5" target="_blank" class="footer-social" aria-label="Twitter / X">
+            <i class="fa-brands fa-instagram"></i>
+
+      </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h5 class="footer-col-title">Quick Links</h5>
+          <ul class="footer-nav-list">
+            <li><a href="#hero"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-chevron-right"></i>About</a></li>
+            <li><a href="#skills"><i class="fa-solid fa-chevron-right"></i>Skills</a></li>
+            <li><a href="#projects"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
+            <li><a href="#experience"><i class="fa-solid fa-chevron-right"></i>Experience</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5 class="footer-col-title">Services</h5>
+          <ul class="footer-nav-list">
+            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i>Web Development</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i>Fix Vibe Coded Mess</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i>Landing Pages</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i>Code Review</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i>Premium Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h5 class="footer-col-title">Get In Touch</h5>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:muhammadezaananjum.15@gmail.com">muhammadezaananjum.15@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+923163784559">+92 316 3784559</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-map-pin"></i>
+              <span>Karachi, Pakistan</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle status-icon"></i>
+              <span>Available for Work</span>
+            </li>
+          </ul>
+          <a href="#contact" class="footer-cta-btn">
+            <i class="fa-solid fa-paper-plane"></i> Send a Message
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          <i class="fa-regular fa-copyright"></i>
+          <span id="footer-year">2026</span> Dev.Ezaan. All rights reserved.
+        </p>
+        <p class="footer-credit">
+          Crafted with by Dev.Ezaan
+        </p>
+      </div>
+    </div>
+  </footer>
+  <a href="https://wa.me/+923163784559" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp"
+    id="whatsapp-btn">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  </a>
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="./Pages/script.js"></script>
+</body>
+</html>
