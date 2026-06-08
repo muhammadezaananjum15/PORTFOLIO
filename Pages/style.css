@@ -28,8 +28,6 @@
   --sec-pad: 120px 0;
   --sec-pad-sm: 80px 0;
   --sec-pad-xs: 60px 0;
-
-  /* Radii */
   --r-sm: 8px;
   --r-md: 16px;
   --r-lg: 24px;
@@ -87,13 +85,10 @@ button {
   background: transparent;
   font-family: inherit;
 }
-
 ::selection {
   background: var(--clr-white);
   color: var(--clr-black);
 }
-
-
 #page-loader {
   position: fixed;
   inset: 0;
@@ -112,8 +107,6 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
-
-/* Particle canvas */
 #loader-canvas {
   position: absolute;
   inset: 0;
@@ -121,8 +114,6 @@ button {
   height: 100%;
   opacity: 0.5;
 }
-
-/* Ambient glow orbs */
 .loader-orb {
   position: absolute;
   border-radius: 50%;
@@ -175,8 +166,6 @@ button {
     transform: translate(-50%, -50%) scale(1.3);
   }
 }
-
-/* Content wrapper */
 .loader-content {
   display: flex;
   flex-direction: column;
@@ -185,8 +174,6 @@ button {
   position: relative;
   z-index: 2;
 }
-
-/* ---- Monogram ring ---- */
 .loader-ring-wrap {
   position: relative;
   width: 140px;
@@ -202,8 +189,6 @@ button {
   width: 100%;
   height: 100%;
 }
-
-/* Spinning arc */
 .loader-arc {
   transform-origin: 60px 60px;
   animation: arcSpin 2.4s linear infinite;
@@ -213,8 +198,6 @@ button {
     transform: rotate(360deg);
   }
 }
-
-/* Pulsing inner ring */
 .loader-pulse-ring {
   transform-origin: 60px 60px;
   animation: ringPulse 2s ease-in-out infinite;
@@ -230,8 +213,6 @@ button {
     r: 46;
   }
 }
-
-/* Center monogram */
 .loader-monogram {
   display: flex;
   align-items: baseline;
@@ -265,8 +246,6 @@ button {
   color: rgba(255, 255, 255, 0.4);
   line-height: 1;
 }
-
-/* Orbiting dot */
 .loader-orbit-dot {
   position: absolute;
   top: 0;
@@ -286,8 +265,6 @@ button {
     transform: rotate(360deg);
   }
 }
-
-/* ---- Identity block ---- */
 .loader-identity {
   display: flex;
   flex-direction: column;
@@ -325,7 +302,6 @@ button {
   color: rgba(255, 255, 255, 0.35);
   margin: 0 1px;
 }
-
 .loader-tagline {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -345,8 +321,6 @@ button {
     transform: translateY(0);
   }
 }
-
-/* ---- Progress bar ---- */
 .loader-progress-wrap {
   width: clamp(200px, 30vw, 280px);
   display: flex;
@@ -409,8 +383,6 @@ button {
   letter-spacing: 0.1em;
   color: rgba(255, 255, 255, 0.5);
 }
-
-/* ---- Scan line ---- */
 .loader-scanline {
   position: absolute;
   left: 0;
@@ -1654,30 +1626,10 @@ button {
   overflow: hidden;
 }
 
-/* Big background text */
-#skills::before {
-  content: 'SKILLS';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-display);
-  font-size: 20vw;
-  font-weight: 700;
-  font-style: normal;
-  color: var(--white-04);
-  letter-spacing: -0.05em;
-  pointer-events: none;
-  white-space: nowrap;
-  z-index: 0;
-}
-
 #skills .container {
   position: relative;
   z-index: 1;
 }
-
-/* Category tabs */
 .skills-tabs {
   display: flex;
   justify-content: center;
